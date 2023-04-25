@@ -1,0 +1,14 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  group_by: ['alertname', 'severity']
+  repeat_interval: 1m
+  receiver: 'telegram'
+
+receivers:
+  - name: 'telegram'
+    telegram_configs:
+      - chat_id: -561777396
+        parse_mode: 'Markdown'
+        bot_token: '5916666210:AAFqJwWYrndnuaSrbOkFGMZTPwgm6KYYClA'
